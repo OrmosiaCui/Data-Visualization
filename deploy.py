@@ -24,4 +24,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    app.run(4999)
+    app.run(5000) #local ip
