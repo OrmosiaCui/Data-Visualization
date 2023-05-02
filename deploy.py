@@ -7,6 +7,15 @@ GB=pickle.load(open('savedmodelGB.sav','rb'))
 def home():
     result=''
     return render_template('index.html',**locals())
+
+@app.route('/school-website')
+def school_website():
+    return render_template('index.html', url='https://sites.google.com/nyu.edu/xinleicui/home')
+
+if __name__ == '__main__':
+    app.run()
+
+
 @app.route('/predict',methods=['POST','GET'])
 def predict():
     decisions = float(request.form['decisions'])
@@ -24,4 +33,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    app.run(5000) #local ip
+    app.run(4999)
